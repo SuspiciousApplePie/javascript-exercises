@@ -1,7 +1,7 @@
 
 const findTheOldest = function(arr) {
     return arr.reduce((acc, curr) => {
-        if (!curr['yearOfDeath']) curr['yearOfDeath'] = 2025;
+        if (!curr['yearOfDeath']) curr['yearOfDeath'] = new Date().getFullYear();
         let age = curr['yearOfDeath'] - curr['yearOfBirth'];
         if (age > acc['age']) {
             acc['name'] = curr['name']
